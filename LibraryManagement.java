@@ -11,6 +11,9 @@ public class LibraryManagement {
             System.out.println("\n---- Library Menu ----");
             System.out.println("1. Add a Book");
             System.out.println("2. Display Books");
+            System.out.println("3. Search Book by Title");
+            System.out.println("4. Issue Book");
+            System.out.println("5. Return Book");
             System.out.println("0. Exit");
             System.out.print("\nEnter your choice: ");
             choice = sc.nextInt();
@@ -31,6 +34,26 @@ public class LibraryManagement {
                 }
                 case 2:{
                     library.displayBooks();
+                    break;
+                }
+                case 3:{
+                    System.out.print("Enter the title to search: ");
+                    String title = sc.nextLine();
+                    library.searchBookByTitle(title);
+                    break;
+                }
+                case 4:{
+                    System.out.print("Enter Book ID to issue: ");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+                    library.issueBook(id);
+                    break;
+                }
+                case 5:{
+                    System.out.print("Enter Book ID to return: ");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+                    library.returnBook(id);
                     break;
                 }
                 case 0:{

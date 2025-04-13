@@ -16,10 +16,10 @@ public class Book{
     public int getId(){
         return id;
     }
-    public String title(){
+    public String getTitle(){
         return title;
     }
-    public String author(){
+    public String getAuthor(){
         return author;
     }
     public boolean isAvaialble(){
