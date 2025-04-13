@@ -5,6 +5,8 @@ public class LibraryManagement {
         Scanner sc = new Scanner(System.in);
 
         Library library = new Library();
+        library.loadFromFile("Library.txt");
+        
         int choice;
 
         do{
@@ -57,6 +59,7 @@ public class LibraryManagement {
                     break;
                 }
                 case 0:{
+                    library.saveToFile("Library.txt");
                     System.out.println("Exited...!");
                     break;
                 }
